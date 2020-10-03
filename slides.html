@@ -8,7 +8,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x3dea004d546409890a8c8f8a75cf8bc","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1cad263cd584e9abd2b9199894b97ee","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -338,23 +338,51 @@ class: inverse, center, middle
 
 Demonstração de código 👩‍💻
 
+---
+class: 
+
+## Exercícios👩‍💻 
+
+1. Crie um projeto `.Rproj`
+
+2.  Crie um arquivo R Markdown com o template `Ninja presentation`
+
+3. Apague o conteúdo após o `YAML` (linha 15 em diante)
+
+4. Aperte Knit e veja o resultado.
+
+5. No tempo restante:
+
+  - Adicione uma tabela a partir de um `data frame` (pode usar `mtcars`, por exemplo). Dica: [Relembre como fazer isso no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/#section-tabelas).
+  
+  - Adicione uma imagem na sua apresentação. (Dica 1: crie uma pasta `img`, salve a imagem nesta pasta; Dica 2: [Relembre como fazer isso no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/#section-imagens))
+  
+---
+
+AQUI É BOM FALAR DE CHUNK OPTIONS!!
+
+
+---
+class: inverse, center, middle
+
+# Metadados da apresentação: `YAML`
+
 
 
 ---
 class:  
 
-## Alterar yaml
+## Alterar `YAML`
 
-- O `yaml` possui informações importantes para a apresentação, como o título, subtítulo, autor, instituição, data, etc.
+- O `YAML` possui informações importantes para a apresentação, como o título, subtítulo, autor, instituição, data, etc.
 
 - __output:__ formato (Ex: html_document, pdf_document, etc). No caso do  `xaringan` , o output é `xaringan::moon_reader`
 
 - __libs_dir:__ pasta onde colocará bibliotecas necessárias (ex. remark-latest.min.js)
 
 ---
-class:  
 
-## Alterar yaml
+## Alterar `YAML`
 
 - Cuidado com a identação!
 
@@ -364,7 +392,7 @@ class:
 ---
 class: 
 
-## Exemplo do código yaml:
+## Exemplo do código `YAML`:
 
 
 ```r
@@ -395,7 +423,7 @@ class:
 
 ## Encoding
 
-- Adicionar no yaml:
+- Adicionar no `YAML`:
 
 
 ```r
@@ -430,7 +458,7 @@ download.file("https://remarkjs.com/downloads/remark-latest.min.js",
               destfile = "libs/remark-latest.min.js")
 ```
 --
-- Adicionar no yaml:
+- Adicionar no `YAML`:
 
 
 ```r
@@ -510,7 +538,7 @@ class:
 
 - Usar em dupla: `nomedotema` e `nomedotema-fonts`
 
-- Adicionar no yaml:
+- Adicionar no `YAML`:
 
 
 ```r
@@ -524,7 +552,7 @@ output:
 ---
 class: 
 
-### Exemplo do código yaml:
+### Exemplo do código `YAML`:
 
 
 ```r

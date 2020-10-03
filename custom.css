@@ -20,3 +20,7 @@ a {
 strong{
   font-weight: bold;
 }
+
+li {
+	font-size: 1.2rem;
+}

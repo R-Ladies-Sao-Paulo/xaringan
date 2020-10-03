@@ -8,7 +8,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x717903cb6e841628d877423c43e08ff","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xdb066d86b4541fcafc70ec7a86c4838","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -223,6 +223,47 @@ class:
 
 ]
 
+---
+class: 
+
+## Estrutura da apresentação
+
+- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
+
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
+
+
+
+&lt;img src="img/html-css-javascript.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+
+---
+class: 
+
+## Estrutura da apresentação
+
+&lt;img src="img/html-css-javascript.jpg" width="40%" style="display: block; margin: auto;" /&gt;
+
+  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+
+  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+
+  - **Javascript** - é uma linguagem de programação, permite que as páginas sejam dinâmicas.
+
+---
+class: 
+
+## O que precisa saber? 
+
+- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+
+- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+
+- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
+
+&lt;img src="https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif" width="20%" style="display: block; margin: auto;" /&gt;
+
 
 ---
 class:  
@@ -271,52 +312,31 @@ class:
 &lt;img src="img/rmd-estrutura-xaringan.png" width="90%" style="display: block; margin: auto;" /&gt;
 
 ---
+class: 
+
+## Como delimitar slides?
+
+- No xaringan, os slides são delimitados por `---` no início da linha.
+
+- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha. Ex:
+
+--
+
+O conteúdo 
+--
+
+aparece 
+--
+
+aos poucos!
+
+---
 class: inverse, center, middle
 
 # Apresentações com R Markdown
 
 
 Demonstração de código 👩‍💻
----
-class: 
-
-## Estrutura da apresentação
-
-- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
-
-- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
-
-
-
-&lt;img src="img/html-css-javascript.jpg" width="50%" style="display: block; margin: auto;" /&gt;
-
-
-
----
-class: 
-
-## Estrutura da apresentação
-
-&lt;img src="img/html-css-javascript.jpg" width="40%" style="display: block; margin: auto;" /&gt;
-
-  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
-
-  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
-
-  - **Javascript** - é uma linguagem de programação, permite que as páginas sejam dinâmicas.
-
----
-class: 
-
-## O que precisa saber? 
-
-- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
-
-- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
-
-- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
-
-&lt;img src="https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif" width="20%" style="display: block; margin: auto;" /&gt;
 
 
 
@@ -330,6 +350,11 @@ class:
 - __output:__ formato (Ex: html_document, pdf_document, etc). No caso do  `xaringan` , o output é `xaringan::moon_reader`
 
 - __libs_dir:__ pasta onde colocará bibliotecas necessárias (ex. remark-latest.min.js)
+
+---
+class:  
+
+## Alterar yaml
 
 - Cuidado com a identação!
 
@@ -389,6 +414,12 @@ class:
 - Fazer download da biblioteca `remark.js`. Duas opções:
   - A função `xaringan::summon_remark()` faz o download da versão mais atual do `remark.js` e salva na pasta `/libs`. 
   
+  
+---
+class: 
+
+## Biblioteca `remark.js`  
+  
 
 ```r
 xaringan::summon_remark()
@@ -409,8 +440,40 @@ output:
     lib_dir: libs
 ```
 
+---
+class: 
+
+## Adicionando conteúdo na apresentação
+
+- Atualiza a apresentação enquanto é editada:
 
 
+```r
+xaringan::inf_mr()
+```
+
+
+---
+class: inverse, center, middle
+
+# Estilo (`.css`)
+
+
+&lt;!-- Demonstração de código 👩‍💻 --&gt;
+
+
+---
+class: 
+
+## Estilo (`.css`)
+
+- Possibilidades:
+
+  - Temas do xaringan
+  
+  - Temas com `{xaringanthemer}`
+  
+  - Alterando o `.css`: arquivo `custom.css`
 
 ---
 class: 
@@ -461,7 +524,7 @@ output:
 ---
 class: 
 
-## Exemplo do código yaml:
+### Exemplo do código yaml:
 
 
 ```r
@@ -471,7 +534,7 @@ subtitle: "Subtítulo da apresentação"
 author: "Autor"
 institute: "Instituição"
 date: "07/09/2019"
-*encoding: "UTF-8"
+encoding: "UTF-8"
 output:
   xaringan::moon_reader:
 *   chakra: libs/remark-latest.min.js  
@@ -484,38 +547,15 @@ output:
 ---
 ```
 
-
 ---
 class: 
 
-## Adicionando conteúdo na apresentação
+### xaringanthemer
 
-- Atualiza a apresentação enquanto é editada:
+- Duas possibilidades:
 
+  - Criar um arquivo com template  `Ninja **themed** presentation`
 
-```r
-xaringan::inf_mr()
-```
-
-
----
-class: 
-
-## Como delimitar slides?
-
-- No xaringan, os slides são delimitados por `---` no início da linha.
-
-- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha. Ex:
-
---
-
-O conteúdo 
---
-
-aparece 
---
-
-aos poucos!
 
 
 
@@ -543,6 +583,11 @@ Class:
 remotes::install_github('rstudio/pagedown')
 pagedown::chrome_print("index.html")
 ```
+
+---
+Class: 
+
+
 
 ## Página web
 

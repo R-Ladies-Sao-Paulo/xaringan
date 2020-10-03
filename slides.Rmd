@@ -214,6 +214,53 @@ knitr::include_graphics("img/hex-xaringan.png")
 
 ]
 
+---
+class: 
+
+## Estrutura da apresentação
+
+- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
+
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
+
+
+
+```{r echo=FALSE, out.width="50%", eval = TRUE}
+knitr::include_graphics("img/html-css-javascript.jpg")
+```
+
+
+
+---
+class: 
+
+## Estrutura da apresentação
+
+```{r echo=FALSE, out.width="40%", eval = TRUE}
+knitr::include_graphics("img/html-css-javascript.jpg")
+```
+
+  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+
+  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+
+  - **Javascript** - é uma linguagem de programação, permite que as páginas sejam dinâmicas.
+
+---
+class: 
+
+## O que precisa saber? 
+
+- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+
+- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+
+- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
+
+```{r, out.width="20%"}
+knitr::include_graphics("https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif")
+```
+
 
 ---
 class:  
@@ -266,58 +313,31 @@ knitr::include_graphics("img/rmd-estrutura-xaringan.png")
 ```
 
 ---
+class: 
+
+## Como delimitar slides?
+
+- No xaringan, os slides são delimitados por `---` no início da linha.
+
+- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha. Ex:
+
+--
+
+O conteúdo 
+--
+
+aparece 
+--
+
+aos poucos!
+
+---
 class: inverse, center, middle
 
 # Apresentações com R Markdown
 
 
 Demonstração de código `r emo::ji("woman_technologist")`
----
-class: 
-
-## Estrutura da apresentação
-
-- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
-
-- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
-
-
-
-```{r echo=FALSE, out.width="50%", eval = TRUE}
-knitr::include_graphics("img/html-css-javascript.jpg")
-```
-
-
-
----
-class: 
-
-## Estrutura da apresentação
-
-```{r echo=FALSE, out.width="40%", eval = TRUE}
-knitr::include_graphics("img/html-css-javascript.jpg")
-```
-
-  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
-
-  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
-
-  - **Javascript** - é uma linguagem de programação, permite que as páginas sejam dinâmicas.
-
----
-class: 
-
-## O que precisa saber? 
-
-- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
-
-- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
-
-- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
-
-```{r, out.width="20%"}
-knitr::include_graphics("https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif")
-```
 
 
 
@@ -331,6 +351,11 @@ class:
 - __output:__ formato (Ex: html_document, pdf_document, etc). No caso do  `xaringan` , o output é `xaringan::moon_reader`
 
 - __libs_dir:__ pasta onde colocará bibliotecas necessárias (ex. remark-latest.min.js)
+
+---
+class:  
+
+## Alterar yaml
 
 - Cuidado com a identação!
 
@@ -390,6 +415,12 @@ class:
 - Fazer download da biblioteca `remark.js`. Duas opções:
   - A função `xaringan::summon_remark()` faz o download da versão mais atual do `remark.js` e salva na pasta `/libs`. 
   
+  
+---
+class: 
+
+## Biblioteca `remark.js`  
+  
 ```{r echo=TRUE, eval=FALSE}
 xaringan::summon_remark()
 
@@ -408,8 +439,39 @@ output:
     lib_dir: libs
 ```
 
+---
+class: 
+
+## Adicionando conteúdo na apresentação
+
+- Atualiza a apresentação enquanto é editada:
+
+```{r echo=TRUE, eval=FALSE}
+xaringan::inf_mr()
+```
 
 
+---
+class: inverse, center, middle
+
+# Estilo (`.css`)
+
+
+<!-- Demonstração de código `r emo::ji("woman_technologist")` -->
+
+
+---
+class: 
+
+## Estilo (`.css`)
+
+- Possibilidades:
+
+  - Temas do xaringan
+  
+  - Temas com `{xaringanthemer}`
+  
+  - Alterando o `.css`: arquivo `custom.css`
 
 ---
 class: 
@@ -446,7 +508,7 @@ output:
 ---
 class: 
 
-## Exemplo do código yaml:
+### Exemplo do código yaml:
 
 ```{r echo=TRUE, eval=FALSE}
 ---
@@ -455,7 +517,7 @@ subtitle: "Subtítulo da apresentação"
 author: "Autor"
 institute: "Instituição"
 date: "07/09/2019"
-{{encoding: "UTF-8"}}
+encoding: "UTF-8"
 output:
   xaringan::moon_reader:
 {{   chakra: libs/remark-latest.min.js  }}
@@ -468,37 +530,15 @@ output:
 ---
 ```
 
-
 ---
 class: 
 
-## Adicionando conteúdo na apresentação
+### xaringanthemer
 
-- Atualiza a apresentação enquanto é editada:
+- Duas possibilidades:
 
-```{r echo=TRUE, eval=FALSE}
-xaringan::inf_mr()
-```
+  - Criar um arquivo com template  `Ninja **themed** presentation`
 
-
----
-class: 
-
-## Como delimitar slides?
-
-- No xaringan, os slides são delimitados por `---` no início da linha.
-
-- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha. Ex:
-
---
-
-O conteúdo 
---
-
-aparece 
---
-
-aos poucos!
 
 
 
@@ -527,6 +567,11 @@ Class:
 remotes::install_github('rstudio/pagedown')
 pagedown::chrome_print("index.html")
 ```
+
+---
+Class: 
+
+
 
 ## Página web
 

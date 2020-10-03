@@ -469,7 +469,7 @@ class:
 
   - Temas do xaringan
   
-  - Temas com `{xaringanthemer}`
+  - Temas com [`{xaringanthemer}`](https://pkg.garrickadenbuie.com/xaringanthemer/)
   
   - Alterando o `.css`: arquivo `custom.css`
 
@@ -535,10 +535,14 @@ class:
 
 ### xaringanthemer
 
-- Duas possibilidades:
+- Cria o arquivo `.css`!
+
+- Duas possibilidades para usar:
 
   - Criar um arquivo com template  `Ninja **themed** presentation`
 
+  - Usar em uma apresentação que já existe: [veja aqui](https://pkg.garrickadenbuie.com/xaringanthemer/#quick-intro)
+    
 
 
 

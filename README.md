@@ -13,7 +13,7 @@ Todas as pessoas participantes devem seguir o [código de conduta da conferênci
 <iframe src="https://r-ladies-sao-paulo.github.io/xaringan/slides.html" width="500" height="380" allowfullscreen></iframe>
 
 
-[Confira a apresentação](https://r-ladies-sao-paulo.github.io/xaringan/slides.html)
+[Confira a apresentação](https://r-ladies-sao-paulo.github.io/xaringan/slides.html).
 
 
 ### Materiais complementares

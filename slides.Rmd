@@ -125,6 +125,7 @@ class:
 ```{r echo=TRUE, eval=FALSE}
 install.packages("xaringan")
 install.packages("xaringanthemer")
+install.packages("pagedown")
 ```
 
 
@@ -180,10 +181,6 @@ class:
 knitr::include_graphics("img/markdown.png")
 ```
 
----
-class: inverse, center, middle
-
-## R Markdown
 
 
 ---
@@ -191,7 +188,7 @@ class: inverse, center, middle
 
 # Apresentações com R Markdown
 
-Demonstração de código `r emo::ji("woman_technologist")`
+
 
 ---
 class: 
@@ -218,27 +215,6 @@ knitr::include_graphics("img/hex-xaringan.png")
 ]
 
 
-
-
-
----
-class: 
-
-## Instalação do pacote xaringan
-
-- Instalar o pacote:
-
-```{r echo=TRUE, eval=FALSE}
-install.packages("xaringan")
-```
-
-- Carregue o pacote:
-
-```{r echo=TRUE, eval=FALSE}
-library(xaringan)
-```
-
-
 ---
 class:  
 
@@ -263,20 +239,18 @@ class:
   
   - `css/` - opcional. Arquivos `.css`.
   
-- Compile (knite) o arquivo com frequência!  
+- `r emo::ji("bell")` **Importante**: Compile (knite) o arquivo com frequência!  
 
 ---
 class: 
 
-## Criar um arquivo rmarkdown
+## Criar um arquivo R Markdown
 
 ### Com template Ninja Presentation
 
   - File > New File > R Markdown...
   
   - New R Markdown > From Template > Ninja presentation
-  
-  - Apagar todo o conteúdo após o código `yaml`
   
 ```{r, out.width="50%"}
 knitr::include_graphics("img/criar-xaringan.JPG")
@@ -285,12 +259,19 @@ knitr::include_graphics("img/criar-xaringan.JPG")
 ---
 class:  
 
-## Estrutura arquivo rmarkdown
+## Estrutura arquivo R Markdown
 
 ```{r, out.width="90%"}
 knitr::include_graphics("img/rmd-estrutura-xaringan.png")
 ```
 
+---
+class: inverse, center, middle
+
+# Apresentações com R Markdown
+
+
+Demonstração de código `r emo::ji("woman_technologist")`
 ---
 class: 
 
@@ -313,7 +294,7 @@ class:
 
 ## Estrutura da apresentação
 
-```{r echo=FALSE, out.width="50%", eval = TRUE}
+```{r echo=FALSE, out.width="40%", eval = TRUE}
 knitr::include_graphics("img/html-css-javascript.jpg")
 ```
 
@@ -329,10 +310,12 @@ class:
 ## O que precisa saber? 
 
 - **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+
 - **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+
 - **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
 
-```{r, out.width="40%"}
+```{r, out.width="20%"}
 knitr::include_graphics("https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif")
 ```
 

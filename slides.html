@@ -8,7 +8,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xdd100c0026c4f33823dcfa67e757f6c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x717903cb6e841628d877423c43e08ff","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -130,6 +130,7 @@ class:
 ```r
 install.packages("xaringan")
 install.packages("xaringanthemer")
+install.packages("pagedown")
 ```
 
 
@@ -188,10 +189,6 @@ class:
 &lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Fonte: &lt;a href='https://rmarkdown.rstudio.com'&gt;Pacote `rmarkdown`&lt;/a&gt;&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
----
-class: inverse, center, middle
-
-## R Markdown
 
 
 ---
@@ -199,7 +196,7 @@ class: inverse, center, middle
 
 # Apresentações com R Markdown
 
-Demonstração de código 👩‍💻
+
 
 ---
 class: 
@@ -227,29 +224,6 @@ class:
 ]
 
 
-
-
-
----
-class: 
-
-## Instalação do pacote xaringan
-
-- Instalar o pacote:
-
-
-```r
-install.packages("xaringan")
-```
-
-- Carregue o pacote:
-
-
-```r
-library(xaringan)
-```
-
-
 ---
 class:  
 
@@ -274,12 +248,12 @@ class:
   
   - `css/` - opcional. Arquivos `.css`.
   
-- Compile (knite) o arquivo com frequência!  
+- 🔔 **Importante**: Compile (knite) o arquivo com frequência!  
 
 ---
 class: 
 
-## Criar um arquivo rmarkdown
+## Criar um arquivo R Markdown
 
 ### Com template Ninja Presentation
 
@@ -287,17 +261,22 @@ class:
   
   - New R Markdown &gt; From Template &gt; Ninja presentation
   
-  - Apagar todo o conteúdo após o código `yaml`
-  
 &lt;img src="img/criar-xaringan.JPG" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
 class:  
 
-## Estrutura arquivo rmarkdown
+## Estrutura arquivo R Markdown
 
 &lt;img src="img/rmd-estrutura-xaringan.png" width="90%" style="display: block; margin: auto;" /&gt;
 
+---
+class: inverse, center, middle
+
+# Apresentações com R Markdown
+
+
+Demonstração de código 👩‍💻
 ---
 class: 
 
@@ -318,7 +297,7 @@ class:
 
 ## Estrutura da apresentação
 
-&lt;img src="img/html-css-javascript.jpg" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/html-css-javascript.jpg" width="40%" style="display: block; margin: auto;" /&gt;
 
   - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
 
@@ -332,10 +311,12 @@ class:
 ## O que precisa saber? 
 
 - **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+
 - **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+
 - **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
 
-&lt;img src="https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif" width="20%" style="display: block; margin: auto;" /&gt;
 
 
 

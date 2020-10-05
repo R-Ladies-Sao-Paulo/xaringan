@@ -83,6 +83,12 @@ knitr::include_graphics("https://beatrizmilz.github.io/slidesR/introR/img/rainbo
 
 .pull-left[
 ### Beatriz Milz
+- [Instrutora de `tidyverse` certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/)
+- Co-organizadora: [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/), [satRday São Paulo](https://saopaulo2019.satrdays.org/), [LatinR](https://latin-r.com/pt), [useR! 2021 global](https://user2021.r-project.org/)
+- Doutoranda em Ciência Ambiental (IEE/USP)
+- Mestre em Ciências (UNIFESP)
+- Bacharela em Gestão Ambiental (EACH/USP)
+- [Embaixadora de Inovação Cívica da Open Knowledge Brasil](https://embaixadoras.ok.org.br/).
 ]
 
 .pull-right[

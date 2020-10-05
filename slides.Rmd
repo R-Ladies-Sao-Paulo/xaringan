@@ -27,7 +27,6 @@ knitr::opts_chunk$set(fig.align = "center",
                       )
 ```
 
-
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_mono_accent(
@@ -88,6 +87,13 @@ knitr::include_graphics("https://beatrizmilz.github.io/slidesR/introR/img/rainbo
 
 .pull-right[
 ### Haydee Svab
+
+- Co-fundadora e cientista de dados da ASK-AR 
+- Trabalhou para: BID, Banco Mundial e Metrô-SP
+- Co-fundadora dos grupos **RLadies-São Paulo**, PoliGNU e PoliGen (USP)
+- Mestra em Eng. e Planej. de Transportes (Poli-USP)
+- Especialista em Democracia Participativa (UFMG)
+- Engenheira Civil/Arquiteta (Programa Poli-FAU/USP)
 ]
 
 ---
@@ -99,11 +105,11 @@ class: middle
 
 - Espaço acolhedor e amigável `r emo::ji("hugs")`
 
-- O evento será gravado. Caso não queira aparecer na gravação, pedimos que desligue o vídeo.
+- O evento será gravado. Caso não queira aparecer na gravação, pedimos que desligue sua câmera.
 
-- Escreva as dúvidas no chat.
+- Escreva suas dúvidas no chat.
 
-- Mantenha o microfone desligado. 
+- Mantenha seu microfone desligado. 
 
 ```{r, out.width="100%"}
 knitr::include_graphics("img/barra_zoom.png")
@@ -116,11 +122,12 @@ class:
 
 ## No seu computador
 
-- R, faça o download da versão mais recente [neste link](https://cran.r-project.org/).
+- R: faça o download da versão mais recente [neste link](https://cran.r-project.org/).
 
-- RStudio, faça o download da versão mais recente [neste link](https://www.rstudio.com/products/rstudio/download/).
+- RStudio: faça o download da versão mais recente [neste link](https://www.rstudio.com/products/rstudio/download/).
 
-- Instalar pacotes:
+- Instale os seguintes pacotes:
+
 
 ```{r echo=TRUE, eval=FALSE}
 install.packages("xaringan")
@@ -141,7 +148,7 @@ class:
 
 ## O ciclo da ciência de dados
 
-```{r, out.width="90%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> - Adaptado de WICKHAM & GROLEMUND, 2017</b></center>"}
+```{r, out.width="90%", fig.cap="<center><b>Ilustração por Allison Horst - Twitter: <a href='https://twitter.com/allison_horst/'> @allison_horst</a> - Adaptado de Wickham e Grolemund, 2017</b></center>"}
 knitr::include_graphics("img/data-analysis.jpg")
 ```
 
@@ -162,7 +169,7 @@ class:
   - `R`
   - `Markdown`
   - `HTML`
-  - e outros.
+  - e outros
 ]
 
 .pull-right[
@@ -197,11 +204,11 @@ class:
 
 .pull-left[
 
-- Possibilita criar apresentações **ninja** com `R Markdown`
+- Possibilita criar apresentações **ninjas** com `R Markdown`
 
 - Utiliza a biblioteca `remark.js`
 
-- Resultado em HTML 
+- Gera resultado em HTML 
 
 - HTML pode ser convertido para PDF (estático)
 ]
@@ -219,9 +226,9 @@ class:
 
 ## Estrutura da apresentação
 
-- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
+- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação que é compilado para um arquivo `.html`
 
-- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
 
 
 
@@ -240,22 +247,22 @@ class:
 knitr::include_graphics("img/html-css-javascript.jpg")
 ```
 
-  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto): é uma linguagem de marcação, é usado para estruturar a página.
 
-  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata): é usado para estilizar os elementos escritos no HTML.
 
-  - **Javascript** - é uma linguagem de programação, permite que as páginas sejam dinâmicas.
+  - **Javascript**: é uma linguagem de programação, permite que as páginas sejam dinâmicas.
 
 ---
 class: 
 
 ## O que precisa saber? 
 
-- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+- **HTML**: É gerado automaticamente ao compilar o `.Rmd`
 
-- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+- **CSS**: É usado para personalizar a parte visual da apresentação. Para saber mais sobre temas: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
 
-- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
+- **JS**: utiliza o `Remark.JS`, mas aceita outros códigos caso seja necessário.
 
 ```{r, out.width="20%"}
 knitr::include_graphics("https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif")
@@ -265,28 +272,34 @@ knitr::include_graphics("https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy
 ---
 class:  
 
-## Recomendações
+## Recomendações #1
 
-- Desenvolva a apresentação em um projeto no RStudio. Facilita muito para organizar os arquivos, posteriormente sincronizar com o GitHub, entre outros.
+- Desenvolva a apresentação em um projeto no RStudio: <br>
+facilita muito para organizar os arquivos e posteriormente sincronizar com o GitHub.
 
   - `File > New Project > New Directory > New Project`
   
-  - Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em `Create Project`.
+  - Dê um nome para seu projeto (será o nome da pasta)
+  
+  - Escolha a pasta no seu computador
+  
+  - Clique em `Create Project`
 
 ---
 class:  
 
-## Recomendações
+## Recomendações #2
 
-- Organize o seu diretório. Por exemplo:
+- Organize o seu diretório. <bbr>
+Por exemplo:
 
   - `img/` - imagens, figuras, etc.
   
   - `libs/` - bibliotecas. 
   
-  - `css/` - opcional. Arquivos `.css`.
+  - `css/` - para arquivos `.css` (opcional)
   
-- `r emo::ji("bell")` **Importante**: Compile (knite) o arquivo com frequência!  
+- `r emo::ji("bell")` **Importante**: Compile (knit) o arquivo com frequência!  
 
 ---
 class: 
@@ -295,9 +308,9 @@ class:
 
 ### Com template Ninja Presentation
 
-  - File > New File > R Markdown...
+  - `File > New File > R Markdown...`
   
-  - New R Markdown > From Template > Ninja presentation
+  - Na janela New R Markdown: <br> `From Template > Ninja Presentation`
   
 ```{r, out.width="50%"}
 knitr::include_graphics("img/criar-xaringan.JPG")
@@ -319,7 +332,10 @@ class:
 
 - No xaringan, os slides são delimitados por `---` no início da linha.
 
-- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha. Ex:
+- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha.
+<br>
+<br>
+Por exemplo:
 
 --
 
@@ -342,7 +358,7 @@ Demonstração de código `r emo::ji("woman_technologist")`
 ---
 class: 
 
-## Exercícios`r emo::ji("woman_technologist")` 
+## `r emo::ji("woman_technologist")` Exercícios 
 
 1. Crie um projeto `.Rproj`
 
@@ -350,30 +366,55 @@ class:
 
 3. Apague o conteúdo após o `YAML` (linha 15 em diante)
 
-4. Aperte Knit e veja o resultado.
+4. Aperte `Knit` e veja o resultado
 
-5. No tempo restante: (Dica: [Relembre como fazer no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/))
+5. No tempo restante: <br>
+Dica: [Relembre como fazer no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/)
 
   - Adicione um slide com a seguinte frase (com as formatações e links como aparecem aqui!):  
   
   > [R-Ladies](https://rladies.org/) é uma organização que promove a __diversidade de gênero__ na comunidade da linguagem `R`.
 
-  - (Continua no próximo slide)
+
+---
+
+
+# Chunk de código
+
+Para inserir um chunk, ou campo de código
+
+- O chunk deve ***iniciar e terminar*** por uma série de 3 crases ` ``` `
+
+- O chunk deve iniciar fornecendo os parâmetro entre `{}` <br>
+Se quiser ver o código e o resultado use echo = TRUE, <br>
+se quiser ver apenas o resultado use echo = FALSE.
+
+```{r, out.width="100%"}
+knitr::include_graphics("img/chunk-options.png")
+```
+
 ---
 class: 
 
-## Exercícios`r emo::ji("woman_technologist")` 
+## `r emo::ji("woman_technologist")` Exercícios  
 
-5. No tempo restante: (Dica: [Relembre como fazer no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/))
-
-  - Adicione uma tabela a partir de um `data frame` (pode usar `mtcars`, por exemplo).
+6. Adicione uma tabela a partir de um `data frame` <br>
+  (Você pode usar `mtcars`, por exemplo)
   
-  - Adicione uma imagem na sua apresentação. (Dica: crie uma pasta `img`, salve a imagem nesta pasta)
+7. Adicione uma imagem na sua apresentação <br>
+  (Dica: crie uma pasta `img`, salve a imagem nesta pasta)
   
----
+8. Inclua um chunk de código em que a variável x recebe o valor 4, a variável y recebe o valor 6 e calcula a soma de x e y.
 
-AQUI É BOM FALAR DE CHUNK OPTIONS!!
+Dica: Se precisar, [consulte o tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/)
 
+--
+
+```{r, echo = TRUE}
+x <-4
+y <- 6
+x + y
+```
 
 ---
 class: inverse, center, middle
@@ -387,12 +428,20 @@ class:
 
 ## Alterar `YAML`
 
-- O `YAML` possui informações importantes para a apresentação, como o título, subtítulo, autor, instituição, data, etc.
+- O `YAML` possui informações importantes para a <br> apresentação como:
+  - título;
+  - subtítulo;
+  - autor;
+  - instituição;
+  - data;
+  - etc.
 
-- __output:__ formato (Ex: html_document, pdf_document, etc). No caso do  `xaringan` , o output é `xaringan::moon_reader`
+- __output:__ indica o formato, por exemplo html_document, pdf_document, etc.
+No caso do  `xaringan`, o output é `xaringan::moon_reader`
 
-- __libs_dir:__ pasta onde colocará bibliotecas necessárias (ex. remark-latest.min.js)
-
+- __libs_dir:__ pasta onde colocará bibliotecas necessárias. <br>
+Por exemplo: `lib_dir: libs` indica que a biblioteca que usamos remark-latest.min.js será salva na pasta libs.
+    
 ---
 
 ## Alterar `YAML`
@@ -426,9 +475,7 @@ output:
 ---
 ```
 
-- Aperte H ou ? para conferir a lista de atalhos do  `xaringan` 
-
-
+- Aperte H ou ? para conferir a lista de atalhos do  `xaringan`
 
 
 
@@ -443,18 +490,27 @@ class:
 encoding: "UTF-8"
 ```
 
+"Uma **codificação de caracteres** é um padrão de relacionamento entre um conjunto de caracteres(...) com um conjunto de outra coisa, como por exemplo números ou pulsos elétricos com o objetivo de **facilitar o armazenamento de texto em computadores e sua transmissão** através de redes de telecomunicação." <br>
+[Wikipedia](https://pt.wikipedia.org/wiki/Codificação_de_caracteres)
+
+<!--"There Ain’t No Such Thing As Plain Text." <br>
+[Joel Spolsky, 2003](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+ If you have a string, in memory, in a file, or in an email message, you have to know what encoding it is in or you cannot interpret it or display it to users correctly." -->
 
 ---
 class: 
 
 ## Biblioteca `remark.js`
 
-- É opcional. Essa etapa possibilita que sua apresentação seja visualizada offline!
+- Seu uso é opcional, mas recomendado! <br>
+Possibilita que sua apresentação seja **visualizada offline**!
 
 
-- Fazer download da biblioteca `remark.js`. Duas opções:
-  - A função `xaringan::summon_remark()` faz o download da versão mais atual do `remark.js` e salva na pasta `/libs`. 
-  
+- Duas opções para fazer download da biblioteca `remark.js`:
+<br><br>
+  - A função `xaringan::summon_remark()` faz o download da versão mais atual do `remark.js` e salva na pasta `/libs`
+<br><br>
+  - Usando a função `download.file` indicando como primeiro parâmetro a url de origem, bem como o destino como parâmetro do *destfile*
   
 ---
 class: 
@@ -497,9 +553,6 @@ class: inverse, center, middle
 # Estilo (`.css`)
 
 
-<!-- Demonstração de código `r emo::ji("woman_technologist")` -->
-
-
 ---
 class: 
 
@@ -533,7 +586,8 @@ class:
 ### Tema
 
 
-- Usar em dupla: `nomedotema` e `nomedotema-fonts`
+- `r emo::ji("bell")` Dica: <br>
+Usar em dupla: `nomedotema` e `nomedotema-fonts`
 
 - Adicionar no `YAML`:
 
@@ -584,17 +638,6 @@ class:
   - Usar em uma apresentação que já existe: [veja aqui](https://pkg.garrickadenbuie.com/xaringanthemer/#quick-intro)
     
 
-
-
----
-class: 
-
-## Dicas - RStudio
-
-```{r echo=FALSE, out.width="100%"}
-knitr::include_graphics("img/rmd-dicas.png")
-```
-
 ---
 class: inverse, center, middle
 
@@ -625,6 +668,10 @@ Class:
 
   - [GitHub Pages](https://pages.github.com/) 
   - [Netlify](https://www.netlify.com/) 
+
+```{r, out.width="80%"}
+knitr::include_graphics("img/rmd-html.png")
+```
 
 - Dica: crie um [bit.ly](https://bitly.com)
 

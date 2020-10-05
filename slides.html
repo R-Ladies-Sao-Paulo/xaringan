@@ -8,7 +8,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"fa026926f8fc49b29f7cd02abd63d6d8","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x98e75bcb985417aad05ecc5939d7d76","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -40,7 +40,6 @@ class: center
 
 
 
-
 <div>
 <style type="text/css">.xaringan-extra-logo {
 width: 110px;
@@ -63,7 +62,12 @@ top:1em;right:1em;
       }
     } else {
       document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
-        .forEach(el => { el.innerHTML += '<a href="https://latin-r.com/pt" class="xaringan-extra-logo"></a>' })
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'https://latin-r.com/pt'
+          slide.appendChild(logo)
+        })
     }
   }
   document.addEventListener('DOMContentLoaded', addLogo)
@@ -94,6 +98,13 @@ top:1em;right:1em;
 
 .pull-right[
 ### Haydee Svab
+
+- Co-fundadora e cientista de dados da ASK-AR 
+- Trabalhou para: BID, Banco Mundial e Metrô-SP
+- Co-fundadora dos grupos **RLadies-São Paulo**, PoliGNU e PoliGen (USP)
+- Mestra em Eng. e Planej. de Transportes (Poli-USP)
+- Especialista em Democracia Participativa (UFMG)
+- Engenheira Civil/Arquiteta (Programa Poli-FAU/USP)
 ]
 
 ---
@@ -105,11 +116,11 @@ class: middle
 
 - Espaço acolhedor e amigável 🤗
 
-- O evento será gravado. Caso não queira aparecer na gravação, pedimos que desligue o vídeo.
+- O evento será gravado. Caso não queira aparecer na gravação, pedimos que desligue sua câmera.
 
-- Escreva as dúvidas no chat.
+- Escreva suas dúvidas no chat.
 
-- Mantenha o microfone desligado. 
+- Mantenha seu microfone desligado. 
 
 &lt;img src="img/barra_zoom.png" width="100%" style="display: block; margin: auto;" /&gt;
 ---
@@ -120,11 +131,12 @@ class:
 
 ## No seu computador
 
-- R, faça o download da versão mais recente [neste link](https://cran.r-project.org/).
+- R: faça o download da versão mais recente [neste link](https://cran.r-project.org/).
 
-- RStudio, faça o download da versão mais recente [neste link](https://www.rstudio.com/products/rstudio/download/).
+- RStudio: faça o download da versão mais recente [neste link](https://www.rstudio.com/products/rstudio/download/).
 
-- Instalar pacotes:
+- Instale os seguintes pacotes:
+
 
 
 ```r
@@ -147,8 +159,8 @@ class:
 ## O ciclo da ciência de dados
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/data-analysis.jpg" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Ilustração por Allison Horst - Twitter: &amp;lt;a href='https://twitter.com/allison_horst/'&amp;gt; @allison_horst&amp;lt;/a&amp;gt; - Adaptado de WICKHAM &amp;amp; GROLEMUND, 2017&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="90%" /&gt;
-&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Ilustração por Allison Horst - Twitter: &lt;a href='https://twitter.com/allison_horst/'&gt; @allison_horst&lt;/a&gt; - Adaptado de WICKHAM &amp; GROLEMUND, 2017&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;img src="img/data-analysis.jpg" alt="&amp;lt;center&amp;gt;&amp;lt;b&amp;gt;Ilustração por Allison Horst - Twitter: &amp;lt;a href='https://twitter.com/allison_horst/'&amp;gt; @allison_horst&amp;lt;/a&amp;gt; - Adaptado de Wickham e Grolemund, 2017&amp;lt;/b&amp;gt;&amp;lt;/center&amp;gt;" width="90%" /&gt;
+&lt;p class="caption"&gt;&lt;center&gt;&lt;b&gt;Ilustração por Allison Horst - Twitter: &lt;a href='https://twitter.com/allison_horst/'&gt; @allison_horst&lt;/a&gt; - Adaptado de Wickham e Grolemund, 2017&lt;/b&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;/div&gt;
 
 
@@ -168,7 +180,7 @@ class:
   - `R`
   - `Markdown`
   - `HTML`
-  - e outros.
+  - e outros
 ]
 
 .pull-right[
@@ -205,11 +217,11 @@ class:
 
 .pull-left[
 
-- Possibilita criar apresentações **ninja** com `R Markdown`
+- Possibilita criar apresentações **ninjas** com `R Markdown`
 
 - Utiliza a biblioteca `remark.js`
 
-- Resultado em HTML 
+- Gera resultado em HTML 
 
 - HTML pode ser convertido para PDF (estático)
 ]
@@ -228,9 +240,9 @@ class:
 
 ## Estrutura da apresentação
 
-- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação, e é compilado para um arquivo `.html`.
+- No `xaringan`, utilizamos o arquivo `.Rmd` para escrever o código da apresentação que é compilado para um arquivo `.html`
 
-- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`.
+- Esse arquivo `.html` é interpretado pelo navegador (ex. Chrome), utilizando também os arquivos `.css` e `.js`
 
 
 
@@ -245,22 +257,22 @@ class:
 
 &lt;img src="img/html-css-javascript.jpg" width="40%" style="display: block; margin: auto;" /&gt;
 
-  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto) - é uma linguagem de marcação, é usado para estruturar a página.
+  - **HTML** (HyperText Markup Language - Linguagem de Marcação de Hipertexto): é uma linguagem de marcação, é usado para estruturar a página.
 
-  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata) - é usado para estilizar os elementos escritos no HTML.
+  - **CSS** (Cascading Style Sheets - Folha de Estilo em Cascata): é usado para estilizar os elementos escritos no HTML.
 
-  - **Javascript** - é uma linguagem de programação, permite que as páginas sejam dinâmicas.
+  - **Javascript**: é uma linguagem de programação, permite que as páginas sejam dinâmicas.
 
 ---
 class: 
 
 ## O que precisa saber? 
 
-- **HTML**: É gerado automaticamente. ao compilar o .Rmd 
+- **HTML**: É gerado automaticamente ao compilar o `.Rmd`
 
-- **CSS**: Temas! Usado para personalizar a parte visual da apresentação. Sobre temas, consulte: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
+- **CSS**: É usado para personalizar a parte visual da apresentação. Para saber mais sobre temas: [xaringan wiki](https://github.com/yihui/xaringan/wiki/Themes)
 
-- **JS**: utiliza o Remark.JS, mas aceita outros códigos caso seja necessário.
+- **JS**: utiliza o `Remark.JS`, mas aceita outros códigos caso seja necessário.
 
 &lt;img src="https://media1.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy-downsized.gif" width="20%" style="display: block; margin: auto;" /&gt;
 
@@ -268,28 +280,34 @@ class:
 ---
 class:  
 
-## Recomendações
+## Recomendações #1
 
-- Desenvolva a apresentação em um projeto no RStudio. Facilita muito para organizar os arquivos, posteriormente sincronizar com o GitHub, entre outros.
+- Desenvolva a apresentação em um projeto no RStudio: &lt;br&gt;
+facilita muito para organizar os arquivos e posteriormente sincronizar com o GitHub.
 
   - `File &gt; New Project &gt; New Directory &gt; New Project`
   
-  - Dê um nome para seu projeto (será o nome da pasta), escolha a pasta no seu computador, e clique em `Create Project`.
+  - Dê um nome para seu projeto (será o nome da pasta)
+  
+  - Escolha a pasta no seu computador
+  
+  - Clique em `Create Project`
 
 ---
 class:  
 
-## Recomendações
+## Recomendações #2
 
-- Organize o seu diretório. Por exemplo:
+- Organize o seu diretório. &lt;bbr&gt;
+Por exemplo:
 
   - `img/` - imagens, figuras, etc.
   
   - `libs/` - bibliotecas. 
   
-  - `css/` - opcional. Arquivos `.css`.
+  - `css/` - para arquivos `.css` (opcional)
   
-- 🔔 **Importante**: Compile (knite) o arquivo com frequência!  
+- 🔔 **Importante**: Compile (knit) o arquivo com frequência!  
 
 ---
 class: 
@@ -298,9 +316,9 @@ class:
 
 ### Com template Ninja Presentation
 
-  - File &gt; New File &gt; R Markdown...
+  - `File &gt; New File &gt; R Markdown...`
   
-  - New R Markdown &gt; From Template &gt; Ninja presentation
+  - Na janela New R Markdown: &lt;br&gt; `From Template &gt; Ninja Presentation`
   
 &lt;img src="img/criar-xaringan.JPG" width="50%" style="display: block; margin: auto;" /&gt;
 
@@ -318,7 +336,10 @@ class:
 
 - No xaringan, os slides são delimitados por `---` no início da linha.
 
-- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha. Ex:
+- Para fazer slides que aparecem aos poucos ( _incremental slides_ ), utilize `--` no início da linha.
+&lt;br&gt;
+&lt;br&gt;
+Por exemplo:
 
 --
 
@@ -341,7 +362,7 @@ Demonstração de código 👩‍💻
 ---
 class: 
 
-## Exercícios👩‍💻 
+## 👩‍💻 Exercícios 
 
 1. Crie um projeto `.Rproj`
 
@@ -349,30 +370,58 @@ class:
 
 3. Apague o conteúdo após o `YAML` (linha 15 em diante)
 
-4. Aperte Knit e veja o resultado.
+4. Aperte `Knit` e veja o resultado
 
-5. No tempo restante: (Dica: [Relembre como fazer no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/))
+5. No tempo restante: &lt;br&gt;
+Dica: [Relembre como fazer no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/)
 
   - Adicione um slide com a seguinte frase (com as formatações e links como aparecem aqui!):  
   
   &gt; [R-Ladies](https://rladies.org/) é uma organização que promove a __diversidade de gênero__ na comunidade da linguagem `R`.
 
-  - (Continua no próximo slide)
+
+---
+
+
+# Chunk de código
+
+Para inserir um chunk, ou campo de código
+
+- O chunk deve ***iniciar e terminar*** por uma série de 3 crases ` ``` `
+
+- O chunk deve iniciar fornecendo os parâmetro entre `{}` &lt;br&gt;
+Se quiser ver o código e o resultado use echo = TRUE, &lt;br&gt;
+se quiser ver apenas o resultado use echo = FALSE.
+
+&lt;img src="img/chunk-options.png" width="100%" style="display: block; margin: auto;" /&gt;
+
 ---
 class: 
 
-## Exercícios👩‍💻 
+## 👩‍💻 Exercícios  
 
-5. No tempo restante: (Dica: [Relembre como fazer no tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/))
-
-  - Adicione uma tabela a partir de um `data frame` (pode usar `mtcars`, por exemplo).
+6. Adicione uma tabela a partir de um `data frame` &lt;br&gt;
+  (Você pode usar `mtcars`, por exemplo)
   
-  - Adicione uma imagem na sua apresentação. (Dica: crie uma pasta `img`, salve a imagem nesta pasta)
+7. Adicione uma imagem na sua apresentação &lt;br&gt;
+  (Dica: crie uma pasta `img`, salve a imagem nesta pasta)
   
----
+8. Inclua um chunk de código em que a variável x recebe o valor 4, a variável y recebe o valor 6 e calcula a soma de x e y.
 
-AQUI É BOM FALAR DE CHUNK OPTIONS!!
+Dica: Se precisar, [consulte o tutorial enviado](https://beatriz-milz.shinyapps.io/tutorial_markdown/)
 
+--
+
+
+```r
+x &lt;-4
+y &lt;- 6
+x + y
+```
+
+```
+## [1] 10
+```
 
 ---
 class: inverse, center, middle
@@ -386,12 +435,20 @@ class:
 
 ## Alterar `YAML`
 
-- O `YAML` possui informações importantes para a apresentação, como o título, subtítulo, autor, instituição, data, etc.
+- O `YAML` possui informações importantes para a &lt;br&gt; apresentação como:
+  - título;
+  - subtítulo;
+  - autor;
+  - instituição;
+  - data;
+  - etc.
 
-- __output:__ formato (Ex: html_document, pdf_document, etc). No caso do  `xaringan` , o output é `xaringan::moon_reader`
+- __output:__ indica o formato, por exemplo html_document, pdf_document, etc.
+No caso do  `xaringan`, o output é `xaringan::moon_reader`
 
-- __libs_dir:__ pasta onde colocará bibliotecas necessárias (ex. remark-latest.min.js)
-
+- __libs_dir:__ pasta onde colocará bibliotecas necessárias. &lt;br&gt;
+Por exemplo: `lib_dir: libs` indica que a biblioteca que usamos remark-latest.min.js será salva na pasta libs.
+    
 ---
 
 ## Alterar `YAML`
@@ -424,9 +481,7 @@ output:
 ---
 ```
 
-- Aperte H ou ? para conferir a lista de atalhos do  `xaringan` 
-
-
+- Aperte H ou ? para conferir a lista de atalhos do  `xaringan`
 
 
 
@@ -442,18 +497,27 @@ class:
 encoding: "UTF-8"
 ```
 
+"Uma **codificação de caracteres** é um padrão de relacionamento entre um conjunto de caracteres(...) com um conjunto de outra coisa, como por exemplo números ou pulsos elétricos com o objetivo de **facilitar o armazenamento de texto em computadores e sua transmissão** através de redes de telecomunicação." &lt;br&gt;
+[Wikipedia](https://pt.wikipedia.org/wiki/Codificação_de_caracteres)
+
+&lt;!--"There Ain’t No Such Thing As Plain Text." &lt;br&gt;
+[Joel Spolsky, 2003](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/)
+ If you have a string, in memory, in a file, or in an email message, you have to know what encoding it is in or you cannot interpret it or display it to users correctly." --&gt;
 
 ---
 class: 
 
 ## Biblioteca `remark.js`
 
-- É opcional. Essa etapa possibilita que sua apresentação seja visualizada offline!
+- Seu uso é opcional, mas recomendado! &lt;br&gt;
+Possibilita que sua apresentação seja **visualizada offline**!
 
 
-- Fazer download da biblioteca `remark.js`. Duas opções:
-  - A função `xaringan::summon_remark()` faz o download da versão mais atual do `remark.js` e salva na pasta `/libs`. 
-  
+- Duas opções para fazer download da biblioteca `remark.js`:
+&lt;br&gt;&lt;br&gt;
+  - A função `xaringan::summon_remark()` faz o download da versão mais atual do `remark.js` e salva na pasta `/libs`
+&lt;br&gt;&lt;br&gt;
+  - Usando a função `download.file` indicando como primeiro parâmetro a url de origem, bem como o destino como parâmetro do *destfile*
   
 ---
 class: 
@@ -497,9 +561,6 @@ xaringan::inf_mr()
 class: inverse, center, middle
 
 # Estilo (`.css`)
-
-
-&lt;!-- Demonstração de código 👩‍💻 --&gt;
 
 
 ---
@@ -548,7 +609,8 @@ class:
 ### Tema
 
 
-- Usar em dupla: `nomedotema` e `nomedotema-fonts`
+- 🔔 Dica: &lt;br&gt;
+Usar em dupla: `nomedotema` e `nomedotema-fonts`
 
 - Adicionar no `YAML`:
 
@@ -601,15 +663,6 @@ class:
   - Usar em uma apresentação que já existe: [veja aqui](https://pkg.garrickadenbuie.com/xaringanthemer/#quick-intro)
     
 
-
-
----
-class: 
-
-## Dicas - RStudio
-
-&lt;img src="img/rmd-dicas.png" width="100%" style="display: block; margin: auto;" /&gt;
-
 ---
 class: inverse, center, middle
 
@@ -641,6 +694,8 @@ Class:
 
   - [GitHub Pages](https://pages.github.com/) 
   - [Netlify](https://www.netlify.com/) 
+
+&lt;img src="img/rmd-html.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 - Dica: crie um [bit.ly](https://bitly.com)
 

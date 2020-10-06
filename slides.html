@@ -8,7 +8,7 @@
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
     <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x98e75bcb985417aad05ecc5939d7d76","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f4786ac4b7334dab9744a61629f52b66","expires":1}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -62,12 +62,7 @@ top:1em;right:1em;
       }
     } else {
       document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
-        .forEach(function (slide) {
-          const logo = document.createElement('a')
-          logo.classList = 'xaringan-extra-logo'
-          logo.href = 'https://latin-r.com/pt'
-          slide.appendChild(logo)
-        })
+        .forEach(el => { el.innerHTML += '<a href="https://latin-r.com/pt" class="xaringan-extra-logo"></a>' })
     }
   }
   document.addEventListener('DOMContentLoaded', addLogo)
@@ -94,6 +89,12 @@ top:1em;right:1em;
 
 .pull-left[
 ### Beatriz Milz
+- [Instrutora de `tidyverse` certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/)
+- Co-organizadora: [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/), [satRday São Paulo](https://saopaulo2019.satrdays.org/), [LatinR](https://latin-r.com/pt), [useR! 2021 global](https://user2021.r-project.org/)
+- Doutoranda em Ciência Ambiental (IEE/USP)
+- Mestre em Ciências (UNIFESP)
+- Bacharela em Gestão Ambiental (EACH/USP)
+- [Embaixadora de Inovação Cívica da Open Knowledge Brasil](https://embaixadoras.ok.org.br/).
 ]
 
 .pull-right[
@@ -235,6 +236,24 @@ class:
 
 ]
 
+
+---
+
+## Vantagens 
+
+👍 É reprodutível.
+
+👍 Podemos inserir equações em LaTeX.
+
+👍 Inserir códigos R e seus resultados.
+
+👍 É possível utilizar o versionamento de código utilizando Git e GitHub.
+
+👍 Possibilita o desenvolvimento do material em equipe (através do GitHub).
+
+👍 Disponibilizando online e enviando o link, é possível atualizar o conteúdo em qualquer momento.
+
+
 ---
 class: 
 
@@ -366,7 +385,7 @@ class:
 
 1. Crie um projeto `.Rproj`
 
-2. Crie um arquivo R Markdown com o template `Ninja presentation`
+2. Crie um arquivo R Markdown com o template `Ninja presentation`, e com o nome `index.html`
 
 3. Apague o conteúdo após o `YAML` (linha 15 em diante)
 
@@ -497,7 +516,7 @@ class:
 encoding: "UTF-8"
 ```
 
-"Uma **codificação de caracteres** é um padrão de relacionamento entre um conjunto de caracteres(...) com um conjunto de outra coisa, como por exemplo números ou pulsos elétricos com o objetivo de **facilitar o armazenamento de texto em computadores e sua transmissão** através de redes de telecomunicação." &lt;br&gt;
+&gt; "Uma **codificação de caracteres** é um padrão de relacionamento entre um conjunto de caracteres(...) com um conjunto de outra coisa, como por exemplo números ou pulsos elétricos com o objetivo de **facilitar o armazenamento de texto em computadores e sua transmissão** através de redes de telecomunicação." &lt;br&gt;
 [Wikipedia](https://pt.wikipedia.org/wiki/Codificação_de_caracteres)
 
 &lt;!--"There Ain’t No Such Thing As Plain Text." &lt;br&gt;
@@ -520,6 +539,7 @@ Possibilita que sua apresentação seja **visualizada offline**!
   - Usando a função `download.file` indicando como primeiro parâmetro a url de origem, bem como o destino como parâmetro do *destfile*
   
 ---
+name: chakra
 class: 
 
 ## Biblioteca `remark.js`  
@@ -540,7 +560,7 @@ download.file("https://remarkjs.com/downloads/remark-latest.min.js",
 ```r
 output:
   xaringan::moon_reader:
-*    chakra: libs/remark-latest.min.js  
+*   chakra: libs/remark-latest.min.js  
     lib_dir: libs
 ```
 
@@ -556,7 +576,23 @@ class:
 xaringan::inf_mr()
 ```
 
+---
+class: 
 
+## 👩‍💻 Exercícios 
+
+1. Altere o YAML:
+
+  1. Adicione um título
+  
+  2. Adicione um subtítulo
+  
+  3. Adicione seu nome no campo de autoria
+  
+  4. Adicione a data
+  
+  5. Extra: possibilite que a sua apresentação seja visualizada offline, salvando a biblioteca `remark.js` e [alterando o chakra no YAML](#chakra).
+  
 ---
 class: inverse, center, middle
 
@@ -577,14 +613,15 @@ class:
   - Alterando o `.css`: arquivo `custom.css`
 
 ---
-class: 
+&lt;!-- class: tiny --&gt;
 
 ### Tema
 
 - Depende da versão do `xaringan` que está usando.
 
 - Para consultar os temas disponíveis:
-  
+
+.tiny[
 
 ```r
 names(xaringan:::list_css())
@@ -601,6 +638,7 @@ names(xaringan:::list_css())
 ## [29] "uo-fonts"         "uo"               "uol-fonts"        "uol"             
 ## [33] "useR-fonts"       "useR"
 ```
+]
 
 
 ---
@@ -658,10 +696,62 @@ class:
 
 - Duas possibilidades para usar:
 
-  - Criar um arquivo com template  `Ninja **themed** presentation`
+  - Criar um arquivo com template:
+  
+&gt;  Ninja **themed** presentation
 
   - Usar em uma apresentação que já existe: [veja aqui](https://pkg.garrickadenbuie.com/xaringanthemer/#quick-intro)
-    
+
+- No YAML:
+
+
+```r
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    chakra: libs/remark-latest.min.js
+*    css: [xaringan-themer.css]     
+```
+  
+
+
+
+---
+class:
+
+## Customizando o CSS
+
+- Podemos alterar coisas específicas no CSS.
+
+- Dica: usar o inspetor do navegador para descobrir o que mudar. Firefox é `CTRL + SHIFT + C`
+
+- Crie um arquivo CSS no projeto (Ex: `custom.css`), e adicione no YAML.
+
+--
+
+- Dica 1: usar `{xariganthemer}`, e arquivos CSS customizados.
+
+
+```r
+output:
+  xaringan::moon_reader:
+*    css: [xaringan-themer.css, custom.css]     
+```
+  
+- Dica 2:  usar temas do xaringan e arquivos CSS customizados.
+
+```r
+output:
+  xaringan::moon_reader:
+*   css: ["rladies", "rladies-fonts", custom.css]
+```
+
+
+---
+
+## 👩‍💻 Exercícios  
+
+1. Mude o estilo da sua apresentação! (sua escolha como quer mudar)
 
 ---
 class: inverse, center, middle
@@ -693,12 +783,24 @@ Class:
   - Em seu site;
 
   - [GitHub Pages](https://pages.github.com/) 
+  
   - [Netlify](https://www.netlify.com/) 
+  
+  - [Netlify Drop](https://app.netlify.com/drop)
 
 &lt;img src="img/rmd-html.png" width="80%" style="display: block; margin: auto;" /&gt;
 
 - Dica: crie um [bit.ly](https://bitly.com)
 
+
+
+---
+
+## 👩‍💻 Exercícios 
+
+1. Gere um arquivo PDF da sua apresentação usando a função `pagedown::chrome_print("index.html")`
+
+2. Deixe sua apresentação online e envie o link no chat! Ex. com o [Netlify Drop](https://app.netlify.com/drop)
 
 ---
 
@@ -754,6 +856,8 @@ class:
 # Referências
 
 ## **xaringan**:
+
+  - [Introdução ao pacote xaringan, Criando apresentações com R](https://beatrizmilz.github.io/IME-27-08-2019/)
 
   - [Apresentação da documentação](http://slides.yihui.name/xaringan/) 
 

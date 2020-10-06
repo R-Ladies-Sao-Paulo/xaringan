@@ -24,3 +24,10 @@ strong{
 li {
 	font-size: 1.2rem;
 }
+
+
+.tiny .remark-code-line { /*Change made here*/
+  font-size: 90% !important;
+}
+
+

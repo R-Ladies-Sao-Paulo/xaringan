@@ -379,6 +379,15 @@ class: inverse, center, middle
 
 Demonstração de código `r emo::ji("woman_technologist")`
 
+???
+- Live coding:
+   - Mostrar criando um projeto
+   - Criar um arquivo com template ninja presentation
+   - Apagar o conteúdo da documentação (falar que aquele código todo é a documentação do pacote)
+   - apertar knit e mostrar o resultado
+   - colocar conteúdo em dois novos slides (escrever só uma frase para mostrar que é com --- que delimitamos os slides)
+   - knit novamente :)
+
 ---
 class: 
 
@@ -399,6 +408,9 @@ Dica: [Relembre como fazer no tutorial enviado](https://beatriz-milz.shinyapps.i
   
   > [R-Ladies](https://rladies.org/) é uma organização que promove a __diversidade de gênero__ na comunidade da linguagem `R`.
 
+???
+
+Depois do tempo do exercício, mostrar como adicionar a frase do exercício.
 
 ---
 
@@ -417,6 +429,22 @@ se quiser ver apenas o resultado use echo = FALSE.
 knitr::include_graphics("img/chunk-options.png")
 ```
 
+---
+class: inverse, center, middle
+
+## Chunks de código
+
+
+Demonstração de código `r emo::ji("woman_technologist")`
+
+???
+- Live coding:
+   - Mostrar como adicionar o chunk (botão insert + atalho com CTRL + ALT + I)
+   - clicar na engrenagem e falar de algumas opções
+   - escrever um código R no chunk e apertar knit para ver código e resultado
+   
+   
+   
 ---
 class: 
 
@@ -439,6 +467,10 @@ x <-4
 y <- 6
 x + y
 ```
+
+???
+
+Depois do tempo do exercício, mostrar um exemplo de resolução.
 
 ---
 class: inverse, center, middle
@@ -571,6 +603,8 @@ class:
 xaringan::inf_mr()
 ```
 
+
+   
 ---
 class: 
 
@@ -587,12 +621,19 @@ class:
   4. Adicione a data
   
   5. Extra: possibilite que a sua apresentação seja visualizada offline, salvando a biblioteca `remark.js` e [alterando o chakra no YAML](#chakra).
-  
+
+
+???
+Depois do tempo do exercício, mostrar a resolução.
+
+
 ---
 class: inverse, center, middle
 
 # Estilo (`.css`)
 
+???
+Mostrar cada uma das possibilidades com live coding!
 
 ---
 class: 
@@ -693,8 +734,7 @@ output:
 
 ```
   
-
-
+!
 
 ---
 class:
@@ -750,6 +790,8 @@ remotes::install_github('rstudio/pagedown')
 pagedown::chrome_print("index.html")
 ```
 
+???
+Mostrar isso com live coding!
 ---
 Class: 
 
@@ -761,19 +803,21 @@ Class:
 
   - Em seu site;
 
-  - [GitHub Pages](https://pages.github.com/) 
+  - A partir de um repositório do GitHub:
+    - [GitHub Pages](https://pages.github.com/) 
+    - [Netlify](https://www.netlify.com/) 
   
-  - [Netlify](https://www.netlify.com/) 
-  
-  - [Netlify Drop](https://app.netlify.com/drop)
+  - Arrastando para enviar:
+    - [Netlify Drop](https://app.netlify.com/drop)
 
 ```{r, out.width="80%"}
 knitr::include_graphics("img/rmd-html.png")
 ```
 
-- Dica: crie um [bit.ly](https://bitly.com)
+- Dica: você pode encurtar o link com o [bit.ly](https://bitly.com)
 
-
+???
+Mostrar isso com live coding!
 
 ---
 
@@ -802,6 +846,10 @@ knitr::include_graphics("img/rmd-html.png")
 - [countdown](https://pkg.garrickadenbuie.com/countdown/#1) - `r emo::ji("x")` CRAN, `r emo::ji("heavy_check_mark")` GitHub
  
 - [emo](https://github.com/hadley/emo) + [ermoji](https://www.garrickadenbuie.com/project/ermoji/)  - `r emo::ji("x")` CRAN, `r emo::ji("heavy_check_mark")` GitHub
+
+???
+
+Se sobrar tempo podemos comentar sobre esses pacotes!
 
 
 ---

@@ -14,6 +14,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+#      ratio: 191:100
 ---
 class: center
 
@@ -59,6 +60,30 @@ xaringanExtra::use_extra_styles(
 )
 ```
 
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "R-Ladies-Sao-Paulo/xaringan") %>% 
+  meta_social(
+    title = "Comunicando seus resultados em R - Aprenda a criar apresentações reprodutíveis",
+    description = paste(
+      "Apresentação sobre ",
+      "como criar apresentações reprodutíveis com R, usando os pacotes rmarkdown e xaringan."
+    ),
+    url = "https://r-ladies-sao-paulo.github.io/xaringan/slides.html",
+    image = "https://r-ladies-sao-paulo.github.io/xaringan/img/share-card.png",
+    image_alt = paste(
+      "Primeiro slide da apresentação sobre ",
+      "como criar apresentações reprodutíveis com R, usando os pacotes rmarkdown e xaringan.",
+      "Apresentado por Beatriz Milz e Haydee Svab."
+    ),
+    og_type = "website",
+    og_author = c("Beatriz Milz", "Haydee Svab"),
+    twitter_card_type = "summary_large_image",
+    twitter_creator = c("@beamilz", "@hsvab")
+  )
+```
+
 
 ## Workshop oferecido por:
 
@@ -102,6 +127,7 @@ knitr::include_graphics("https://beatrizmilz.github.io/slidesR/introR/img/rainbo
 - Engenheira Civil/Arquiteta (Programa Poli-FAU/USP)
 ]
 
+
 ---
 class: middle
 
@@ -120,6 +146,9 @@ class: middle
 ```{r, out.width="100%"}
 knitr::include_graphics("img/barra_zoom.png")
 ```
+
+
+
 ---
 
 class: 
@@ -185,6 +214,15 @@ knitr::include_graphics("img/hex-rmarkdown.png")
 ]
 
 
+
+---
+class: center, middle
+
+## Pergunta!
+
+https://app.sli.do/event/i5vnxvoa
+
+<iframe src="https://app.sli.do/event/i5vnxvoa/embed/polls/37bd0d1d-7f6f-4431-85ac-e81fe70b622f" width="650" height="400"></iframe>
 ---
 class:  
 
@@ -194,6 +232,39 @@ class:
 knitr::include_graphics("img/markdown.png")
 ```
 
+
+---
+## Exemplos
+
+.pull-left[
+
+- Blogs:
+  - [Alison Hill](https://alison.rbind.io/)
+  - [Florencia D'Andrea](https://florencia.netlify.app/)
+  - [RStudio AI Blog](https://blogs.rstudio.com/ai/)
+  
+- Livros:
+  - [Tidy models with R](https://www.tmwr.org/)
+  - [Ciência de Dados em R](https://livro.curso-r.com/) - da [Curso-R](https://curso-r.com/)
+  
+- Currículo: 
+  - [Beatriz Milz](https://beatrizmilz.github.io/resume/index.html) 
+
+
+]
+
+.pull-right[
+
+- Tutoriais:
+  - [Exploring missing values in naniar](https://allisonhorst.shinyapps.io/missingexplorer/)
+  - [Tutorial sobre Markdown](https://beatriz-milz.shinyapps.io/tutorial_markdown/)
+  
+- [Newsleters automatizadas](https://sciencepulse.org/news/)
+
+- Apresentações: 
+  - [Garrick Aden-Buie](https://www.garrickadenbuie.com/talk/build-your-own-universe/)
+  - [Alison Hill e Desirée De Leon](https://rstudio-education.github.io/sharing-short-notice/#1)
+]
 
 
 ---
@@ -314,7 +385,7 @@ class:
 
 ## Recomendações #2
 
-- Organize o seu diretório. <bbr>
+- Organize o seu diretório. <br>
 Por exemplo:
 
   - `img/` - imagens, figuras, etc.
@@ -370,6 +441,7 @@ aparece
 --
 
 aos poucos!
+
 
 ---
 class: inverse, center, middle

@@ -20,6 +20,7 @@ install.packages("xaringan")
 install.packages("xaringanthemer")
 install.packages("pagedown")
 ```
+Você também pode utilizar o RStudio Cloud: https://rstudio.cloud/project/1745211
 
 ### Slides
 

@@ -30,6 +30,19 @@ install.packages("pagedown")
 [Confira a apresentação](https://r-ladies-sao-paulo.github.io/xaringan/slides.html).
 
 
-### Materiais complementares
+### Exemplo de resolução dos exercícios
 
-- Em breve!
+- Exercício 1 - [Criar a estrutura](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/exemplo_1_criar_estrutura.Rmd)
+
+
+- Exercício 2 - [Adicionar conteúdo](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/exemplo_2_adiciona_conteudo.Rmd)
+
+
+- Exercício 3 - [Alterar os metadados](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/exemplo_3_yaml.Rmd)
+
+
+- Exercício 4 - Alterar estilo:
+  - [Com temas do xaringan](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/exemplo_4_estilo_temas.Rmd)
+  - [Com temas do xaringan + CSS customizado](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/exemplo_4_estilo_tema_alterado.Rmd) + [Veja o que foi alterado no CSS aqui](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/custom.css)
+  - [Com xaringanthemer + CSS customizado](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/exemplo_4_estilo_xaringanthemer.Rmd) + [Veja o que foi alterado no CSS aqui](https://github.com/R-Ladies-Sao-Paulo/xaringan/blob/main/exemplos_exercicio/custom_theme.css)
+    - Veja o resultado final em [HTML](https://r-ladies-sao-paulo.github.io/xaringan/exemplos_exercicio/exemplo_4_estilo_xaringanthemer.html#1) e [PDF](https://r-ladies-sao-paulo.github.io/xaringan/exemplos_exercicio/exemplo_4_estilo_xaringanthemer.pdf)

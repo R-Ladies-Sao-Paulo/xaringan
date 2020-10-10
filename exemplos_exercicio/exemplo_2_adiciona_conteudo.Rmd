@@ -1,0 +1,52 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+> [R-Ladies](https://rladies.org/) é uma organização que promove a __diversidade de gênero__ na comunidade da linguagem `R`.
+
+
+---
+
+Exemplo parcial da base `mtcars`:
+
+```{r}
+knitr::kable(head(mtcars))
+```
+
+---
+
+- Adicionando imagem usando markdown:
+
+![](https://cienciadedatos.github.io/dados/reference/figures/dados-hex.png)
+---
+
+
+
+```{r echo=FALSE, fig.align='center', out.width="50%"}
+knitr::include_graphics("https://cienciadedatos.github.io/dados/reference/figures/dados-hex.png")
+```
+
+---
+
+
+```{r}
+knitr::include_graphics("img/naruto.jpg")
+```
+
+---
+```{r}
+x <-4
+y <- 6
+x + y
+```

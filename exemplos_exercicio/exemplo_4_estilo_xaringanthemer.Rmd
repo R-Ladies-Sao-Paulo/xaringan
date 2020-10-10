@@ -1,0 +1,57 @@
+---
+title: "Apresentação Ninja"
+subtitle: "Apresentação de exemplo feita no workshop sobre xaringan"
+author: "@beamilz + @hsvab + @fernandakellyrs"
+institute: "[#LatinR2020](https://twitter.com/LatinR_Conf) e [R-Ladies GYN](https://twitter.com/rladiesgyn)"
+date: "Atualizado em `r format(Sys.Date(), format='%d de %B de %Y')`"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js 
+    css: ["xaringan-themer.css", "custom_theme.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light(base_color = "#5b234d")
+```
+
+> [R-Ladies](https://rladies.org/) é uma organização que promove a __diversidade de gênero__ na comunidade da linguagem `R`.
+
+
+---
+
+Exemplo parcial da base `mtcars`:
+
+```{r}
+knitr::kable(head(mtcars))
+```
+
+---
+
+- Adicionando imagem usando markdown:
+
+![](https://cienciadedatos.github.io/dados/reference/figures/dados-hex.png)
+---
+
+```{r echo=FALSE, fig.align='center', out.width="50%"}
+knitr::include_graphics("https://cienciadedatos.github.io/dados/reference/figures/dados-hex.png")
+```
+
+---
+
+```{r}
+knitr::include_graphics("img/naruto.jpg")
+```
+
+---
+```{r}
+x <-4
+y <- 6
+x + y
+```

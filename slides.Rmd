@@ -104,10 +104,10 @@ knitr::include_graphics("https://beatrizmilz.github.io/slidesR/introR/img/rainbo
 ]
 
 ---
-## Olá!
-
 .pull-left[
 ### Beatriz Milz
+<a href='https://beatrizmilz.com'><i class="fas fa-house-user"></i></a>    <a href='mailto:beatriz.milz@usp.br'><i class="far fa-envelope"></i></a>   <a href='https://twitter.com/BeaMilz'  target="_blank"><i class="fab fa-twitter"></i></a>   <a href='https://github.com/beatrizmilz' target="_blank"><i class="fab fa-github"></i></a>   <a href='https://orcid.org/0000-0002-3064-4486' target="_blank"><i class="fab fa-orcid"></i></a>   <a href='http://lattes.cnpq.br/5150665880581477' target="_blank"><i class="ai ai-lattes"></i></a>   <a href='https://beatrizmilz.github.io/resume/index.html' target="_blank"><i class="ai ai-cv"></i></a>   <a href='https://discourse.curso-r.com/u/beatrizmilz/summary' target="_blank"><i class="fab fa-discourse"></i></a> <a href='https://www.instagram.com/beatrizmilz/' target="_blank"><i class="fab fa-instagram"></i></a> 
+
 - [Instrutora de `tidyverse` certificada pela RStudio](https://education.rstudio.com/trainers/people/milz+beatriz/)
 - Co-organizadora: [R-Ladies São Paulo](https://www.meetup.com/R-Ladies-Sao-Paulo/), [satRday São Paulo](https://saopaulo2019.satrdays.org/), [LatinR](https://latin-r.com/pt), [useR! 2021 global](https://user2021.r-project.org/)
 - Doutoranda em Ciência Ambiental (IEE/USP)
@@ -118,6 +118,7 @@ knitr::include_graphics("https://beatrizmilz.github.io/slidesR/introR/img/rainbo
 
 .pull-right[
 ### Haydee Svab
+<a href='https://www.linkedin.com/in/hsvab/'><i class="fab fa-linkedin"></i></a>  <a href='mailto:hsvab@hsvab.eng.br'><i class="far fa-envelope"></i></a>   <a href='https://twitter.com/hsvab'  target="_blank"><i class="fab fa-twitter"></i></a>   <a href='https://www.instagram.com/haydeesvab/' target="_blank"><i class="fab fa-instagram"></i></a>  <a href='https://github.com/hsvab' target="_blank"><i class="fab fa-github"></i></a>   <a href='http://lattes.cnpq.br/9186914175329359' target="_blank"><i class="ai ai-lattes"></i></a>
 
 - Co-fundadora e cientista de dados da ASK-AR 
 - Trabalhou para: BID, Banco Mundial e Metrô-SP
@@ -514,6 +515,7 @@ Demonstração de código `r emo::ji("woman_technologist")`
    - Mostrar como adicionar o chunk (botão insert + atalho com CTRL + ALT + I)
    - clicar na engrenagem e falar de algumas opções
    - escrever um código R no chunk e apertar knit para ver código e resultado
+   - Mostrar um chunk e setup!
    
    
    
@@ -523,7 +525,7 @@ class:
 ## `r emo::ji("woman_technologist")` Exercícios  
 
 6. Adicione uma tabela a partir de um `data frame` <br>
-  (Você pode usar `mtcars`, por exemplo)
+  (Você pode usar `mtcars`, por exemplo).
   
 7. Adicione uma imagem na sua apresentação <br>
   (Dica: crie uma pasta `img`, salve a imagem nesta pasta)
@@ -967,6 +969,18 @@ class:
 
   - [Remark.js Wiki](https://github.com/gnab/remark/wiki)
  
+---
+
 ## Outros:
 
   - [Material sobre como configurar o Git e GitHub no RStudio](https://beatrizmilz.github.io/slidesR/git_rstudio.html)
+  
+  - O pacote [dados](https://cienciadedatos.github.io/dados/) disponibiliza bases de dados traduzidas para o Português.
+  
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+<!-- final font awesome -->
+
+<!-- inicio github buttons  -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- final github buttons  -->

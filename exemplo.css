@@ -1,0 +1,11 @@
+.title-slide{
+  background-image: url("img/HexFabric.jpg");
+  background-size: cover;
+
+
+}
+
+
+.title-slide, .title-slide h1, .title-slide h2, .title-slide h3 {
+	color: #000000;
+}

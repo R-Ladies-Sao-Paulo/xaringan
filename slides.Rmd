@@ -875,14 +875,14 @@ Class:
 
   - Em seu site;
 
-  - A partir de um repositório do GitHub:
-    - [GitHub Pages](https://pages.github.com/) 
-    - [Netlify](https://www.netlify.com/) 
+  - A partir de um repositório do GitHub: 
+      - [GitHub Pages](https://pages.github.com/) 
+      - [Netlify](https://www.netlify.com/) - Faça login com a sua conta no GitHub!
   
   - Arrastando para enviar:
-    - [Netlify Drop](https://app.netlify.com/drop)
+      - [Netlify Drop](https://app.netlify.com/drop)
 
-```{r, out.width="80%"}
+```{r, out.width="60%"}
 knitr::include_graphics("img/rmd-html.png")
 ```
 
@@ -967,3 +967,6 @@ class:
 
   - [Remark.js Wiki](https://github.com/gnab/remark/wiki)
  
+## Outros:
+
+  - [Material sobre como configurar o Git e GitHub no RStudio](https://beatrizmilz.github.io/slidesR/git_rstudio.html)

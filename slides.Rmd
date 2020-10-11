@@ -223,7 +223,11 @@ class: center, middle
 
 https://app.sli.do/event/i5vnxvoa
 
-<iframe src="https://app.sli.do/event/i5vnxvoa/embed/polls/37bd0d1d-7f6f-4431-85ac-e81fe70b622f" width="650" height="400"></iframe>
+Respostas recebidas durante o evento:
+
+```{r, out.width="70%"}
+knitr::include_graphics("img/respostas-slido.PNG")
+```
 ---
 class:  
 

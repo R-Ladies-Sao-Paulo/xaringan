@@ -57,4 +57,6 @@ install.packages("pagedown")
 
 - [Adicionar bibliografias e citações no xaringan](https://github.com/yihui/xaringan/wiki/Bibliography-and-citations)
 
+- [Como adicionar um logo em todos os slides com xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/logo)
+
 - [Zine sobre Git](https://wizardzines.com/zines/oh-shit-git/)

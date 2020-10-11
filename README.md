@@ -6,7 +6,10 @@ Todas as pessoas participantes devem seguir o [código de conduta da conferênci
 
 ### Pré-requisitos:
 
-- [Tutorial de Markdown](https://beatriz-milz.shinyapps.io/tutorial_markdown/) - não é obrigatório, porém é recomendado!
+- [Tutorial de Markdown](https://beatriz-milz.shinyapps.io/tutorial_markdown/) - não é obrigatório, porém é recomendado:
+
+<iframe src="https://beatriz-milz.shinyapps.io/tutorial_markdown/" width="500" height="380" allowfullscreen></iframe>
+
 
 - R, faça o download da versão mais recente [neste link](https://cran.r-project.org/).
 

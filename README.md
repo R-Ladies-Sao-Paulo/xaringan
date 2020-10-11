@@ -27,8 +27,10 @@ install.packages("pagedown")
 
 ### Slides
 
+<a href='https://r-ladies-sao-paulo.github.io/xaringan/slides.html'>
+![](https://r-ladies-sao-paulo.github.io/xaringan/img/share-card.png) 
+</a>
 
-<iframe src="https://r-ladies-sao-paulo.github.io/xaringan/slides.html" width="500" height="380" allowfullscreen></iframe>
 
 
 [Confira a apresentação](https://r-ladies-sao-paulo.github.io/xaringan/slides.html).

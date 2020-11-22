@@ -25,6 +25,14 @@ install.packages("xaringanthemer")
 install.packages("pagedown")
 ```
 
+### Video no Youtube
+
+<a href='https://youtu.be/WxKYqtF2qDg'>
+![](https://r-ladies-sao-paulo.github.io/xaringan/img/youtube.png) 
+</a>
+
+
+
 ### Slides
 
 <a href='https://r-ladies-sao-paulo.github.io/xaringan/slides.html'>
